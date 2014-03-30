@@ -67,7 +67,7 @@ app.post('/api/books', function(request, response) {
     book.save(function(err) {
         if(!err) {
             console.log('created');
-            return response.send(book)
+            return response.send(book);
         } else {
             console.log(err);
         }
@@ -82,5 +82,23 @@ app.get('/api/books/:id', function(request, response) {
         } else {
             return console.log(err);
         }
+    });
+});
+
+app.put('/api/books/:id', function(request, response) {
+    console.log("updating book " + request.body.title);
+    return BookModel.findById( request.params.id, function(err, book) {
+        book.title = request.body.title;
+        book.author = request.body.author;
+        book.releaseDate = request.body.releaseDate;
+
+        return book.save( function( err ) {
+            if(!err) {
+                console.log('book updated');
+                return response.send(book);
+            } else {
+                console.log(err);
+            }
+        });
     });
 });
