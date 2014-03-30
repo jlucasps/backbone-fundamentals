@@ -1,0 +1,57 @@
+
+.book {
+    outline: 1px solid #aaa;
+    width: 350px;
+    height: 130px;
+    background-color: #fff;
+    float: left;
+    margin: 5px;
+}
+
+.book ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.book button {
+    float: right;
+    margin: 10px;
+}
+
+#form-book label {
+    width: 100px;
+    margin-right: 10px;
+    text-align: right;
+    line-height: 25px;
+}
+
+#form-book label, #form-book input {
+    display: block;
+    margin-bottom: 10px;
+    float: left;
+}
+
+#form-book label[for="title"], #form-book label[for="release-date"] {
+    clear: both;
+}
+
+#form-book button {
+    display: block;
+    margin: 5px 20px 10px 10px;
+    float: right;
+    clear: both;
+}
+
+#form-book div {
+    width: 550px;
+}
+
+#form-book div:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+}
