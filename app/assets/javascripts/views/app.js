@@ -1,4 +1,6 @@
+
 define(['jquery', 'backbone', 'LibraryView'],
+
 function($, Backbone, LibraryView) {
 
   var AppView = Backbone.View.extend({
@@ -23,7 +25,7 @@ function($, Backbone, LibraryView) {
 
       return this;
     }
-
+    
   });
 
   return AppView;

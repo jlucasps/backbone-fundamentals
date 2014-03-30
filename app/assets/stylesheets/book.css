@@ -31,7 +31,7 @@
     float: left;
 }
 
-#form-book label[for="title"], #form-book label[for="release-date"] {
+#form-book label[for="title"], #form-book label[for="releaseDate"] {
     clear: both;
 }
 
