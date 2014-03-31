@@ -3,10 +3,13 @@ define(['backbone'],
 function(Backbone) {
 
   var Book = Backbone.Model.extend({
+    
+    idAttribute: "_id",
+    
     defaults: {
       title: "No title",
       author: "Unknown",
-      releaseDate: "Unknown",
+      releaseDate: new Date(),
       keywords: "None"
     },
 
@@ -14,6 +17,7 @@ function(Backbone) {
       response.id = response._id;
       return response;
     }
+    
   });
 
   return Book;

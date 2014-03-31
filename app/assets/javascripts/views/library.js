@@ -1,5 +1,9 @@
 
-define(['backbone', 'LibraryCollection', 'BookView', 'BookModel', 'text!tmpl/books/formBook.html'],
+define(['backbone',
+        'LibraryCollection',
+        'BookView',
+        'BookModel',
+        'text!tmpl/books/formBook.html'],
 
 function(Backbone, LibraryCollection, BookView, BookModel, BookFormTemplate) {
   
@@ -45,7 +49,7 @@ function(Backbone, LibraryCollection, BookView, BookModel, BookFormTemplate) {
           formData[element.id] = $(element).val();
         }
       });
-      
+
       this.collection.create( formData, {wait: true} );
     }
   });

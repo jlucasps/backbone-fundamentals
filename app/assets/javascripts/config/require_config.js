@@ -34,7 +34,7 @@ require.config({
     },
     bootstrap: {
       deps: ['jquery']
-    } 
+    }
   }
 });
 
