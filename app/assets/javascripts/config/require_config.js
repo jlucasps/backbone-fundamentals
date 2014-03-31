@@ -3,11 +3,11 @@ require.config({
   paths: {
 
     // Vendors
-    jquery: 'javascripts/vendor/jquery/jquery-1.10.2',
-    underscore: 'javascripts/vendor/underscore/underscore',
-    backbone: 'javascripts/vendor/backbone/backbone',
+    jquery: 'javascripts/vendor/jquery/jquery-2.1.0.min',
+    underscore: 'javascripts/vendor/underscore/underscore-1.6.0.min',
+    backbone: 'javascripts/vendor/backbone/backbone-1.1.2.min',
     text: 'javascripts/vendor/requirejs/text',
-    bootstrap: 'javascripts/vendor/bootstrap/bootstrap',
+    bootstrap: 'javascripts/vendor/bootstrap/bootstrap-3.1.1.min',
 
     // Root directories
     js: 'javascripts',

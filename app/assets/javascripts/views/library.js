@@ -12,15 +12,18 @@ function(Backbone, LibraryCollection, BookView, BookModel, BookFormTemplate) {
       'click #add-book': 'addBook'
     },
 
-    initialize: function(initialBooks) {
-      this.collection = new LibraryCollection(initialBooks);
-      this.listenTo(this.collection, 'add', this.renderBook);
+    initialize: function() {
+      this.$el.append(BookFormTemplate);
+
+      this.collection = new LibraryCollection();
+      this.collection.fetch( { reset: true } );
       this.render();
+
+      this.listenTo( this.collection, 'add', this.renderBook );
+      this.listenTo( this.collection, 'reset', this.render );
     },
     
     render: function() {
-      this.$el.append(BookFormTemplate);
-
       this.collection.each( function( item ) {
         this.renderBook( item );
       }, this );
@@ -39,11 +42,11 @@ function(Backbone, LibraryCollection, BookView, BookModel, BookFormTemplate) {
 
       $("#form-book div").children('input').each( function( i, element) {
         if ( $(element).val() !== '' ) {
-          formData[element.id] = $(element).val() ;
+          formData[element.id] = $(element).val();
         }
       });
-
-      this.collection.add(new BookModel(formData) );
+      
+      this.collection.create( formData, {wait: true} );
     }
   });
 

@@ -1,5 +1,5 @@
 define(['backbone'],
-  
+
 function(Backbone) {
 
   var Book = Backbone.Model.extend({
@@ -8,6 +8,11 @@ function(Backbone) {
       author: "Unknown",
       releaseDate: "Unknown",
       keywords: "None"
+    },
+
+    parse: function( response ) {
+      response.id = response._id;
+      return response;
     }
   });
 
