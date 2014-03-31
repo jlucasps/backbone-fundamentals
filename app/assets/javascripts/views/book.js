@@ -1,7 +1,7 @@
 
-define(['backbone', 'text!tmpl/books/book.html'],
+define(['backbone', 'DateFormat', 'text!tmpl/books/book.html'],
 
-function(Backbone, BookTempate) {
+function(Backbone, DateFormat, BookTempate) {
 
   var BookView = Backbone.View.extend({
 

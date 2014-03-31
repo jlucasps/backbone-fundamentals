@@ -8,6 +8,7 @@ require.config({
     backbone: 'javascripts/vendor/backbone/backbone-1.1.2.min',
     text: 'javascripts/vendor/requirejs/text',
     bootstrap: 'javascripts/vendor/bootstrap/bootstrap-3.1.1.min',
+    DateFormat: 'javascripts/vendor/plugins/dateFormat',
 
     // Root directories
     js: 'javascripts',
@@ -29,11 +30,11 @@ require.config({
       exports: '_'
     },
     backbone: {
-      deps: ['underscore', 'jquery'],
+      deps: [ 'underscore', 'jquery' ],
       exports: 'Backbone'
     },
     bootstrap: {
-      deps: ['jquery']
+      deps: [ 'jquery' ]
     }
   }
 });
